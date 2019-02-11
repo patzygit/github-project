@@ -1,0 +1,727 @@
+Using Bash
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT (new-hola)
+$ git init my-first-git-course
+Initialized empty Git repository in C:/Users/CapacitacionJala/Desktop/GIT/my-first-git-course/.git/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT (new-hola)
+$ cd my-first-git-course/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/my-first-git-course (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/my-first-git-course (master)
+
+
+from UI
+create project button on dashboard
+
+
+Clonning a repository
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/my-first-git-course (master)
+$ cd ..
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT (new-hola)
+$ git clone https://github.com/patzygit/github-project.git
+Cloning into 'github-project'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT (new-hola)
+$
+*/***************************
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT (new-hola)
+$ git init my-first-git-course
+Initialized empty Git repository in C:/Users/CapacitacionJala/Desktop/GIT/my-first-git-course/.git/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT (new-hola)
+$ cd my-first-git-course/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/my-first-git-course (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/my-first-git-course (master)
+$ cd ..
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT (new-hola)
+$ git clone https://github.com/patzygit/github-project.git
+Cloning into 'github-project'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT (new-hola)
+$ cd github-project/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ cd ..
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT (new-hola)
+$ cd my-first-git-course/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/my-first-git-course (master)
+$ git remote -v
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/my-first-git-course (master)
+$ git remote add origin "https://github.com/patzygit/github-project.git"
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/my-first-git-course (master)
+$ git remote -v
+origin  https://github.com/patzygit/github-project.git (fetch)
+origin  https://github.com/patzygit/github-project.git (push)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/my-first-git-course (master)
+$ cd ..
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT (new-hola)
+$ ls
+github-project/  my-first-git-course/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT (new-hola)
+$ cd github-project/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git remote -v
+origin  https://github.com/patzygit/github-project.git (fetch)
+origin  https://github.com/patzygit/github-project.git (push)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ ssh-keygen -t ed25519 -C "Wilma.Paca@Jalasoft.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/CapacitacionJala/.ssh/id_ed25519):
+Created directory '/c/Users/CapacitacionJala/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/CapacitacionJala/.ssh/id_ed25519.
+Your public key has been saved in /c/Users/CapacitacionJala/.ssh/id_ed25519.pub.
+The key fingerprint is:
+SHA256:AyIdCxVRaOqxg9qfycT1hWvZ8nlpF+q5sKdDnehOUMo Wilma.Paca@Jalasoft.com
+The key's randomart image is:
++--[ED25519 256]--+
+|  ..==.          |
+|   ooo           |
+|  .o+ .   .      |
+|  o. . o +       |
+| o o  . E .o .   |
+|. +. . . Bo o .  |
+|.. .o   *o+  o . |
+|. .o o . +o+*..  |
+|   .=    .*B+o   |
++----[SHA256]-----+
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ cat  ~/.ssh/id_ed25519.pub | clip
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ touch Match,java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Match,java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git add Match,java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   Match,java
+
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git commit -m "Math class added to repository"
+[master 615df78] Math class added to repository
+ Committer: Capacitacion Jala <CapacitacionJala@fundacion-jala.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Match,java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git log
+commit 615df7819f2a9a1fdeaa77bb695f9dc4590cfad6 (HEAD -> master)
+Author: Capacitacion Jala <CapacitacionJala@fundacion-jala.local>
+Date:   Mon Feb 11 17:44:18 2019 -0400
+
+    Math class added to repository
+
+commit 8d0d5bd239fad3f4374dfb29f3bc452cf0594c58 (origin/master, origin/HEAD)
+Author: patzygit <33137804+patzygit@users.noreply.github.com>
+Date:   Mon Feb 11 17:16:02 2019 -0400
+
+    Adding a readme file
+
+commit 1dfe6d99bd068ddde42227869b5e7100669e6e04
+Author: patzygit <33137804+patzygit@users.noreply.github.com>
+Date:   Mon Feb 11 17:15:21 2019 -0400
+
+    Initial commit
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git config --global user.name "Wilma Paca"
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git config --global user.email "wilma.paca@jalasoft.com"
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git local
+git: 'local' is not a git command. See 'git --help'.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git config --global user.email
+wilma.paca@jalasoft.com
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git config --global user.name
+Wilma Paca
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git log
+commit 615df7819f2a9a1fdeaa77bb695f9dc4590cfad6 (HEAD -> master)
+Author: Capacitacion Jala <CapacitacionJala@fundacion-jala.local>
+Date:   Mon Feb 11 17:44:18 2019 -0400
+
+    Math class added to repository
+
+commit 8d0d5bd239fad3f4374dfb29f3bc452cf0594c58 (origin/master, origin/HEAD)
+Author: patzygit <33137804+patzygit@users.noreply.github.com>
+Date:   Mon Feb 11 17:16:02 2019 -0400
+
+    Adding a readme file
+
+commit 1dfe6d99bd068ddde42227869b5e7100669e6e04
+Author: patzygit <33137804+patzygit@users.noreply.github.com>
+Date:   Mon Feb 11 17:15:21 2019 -0400
+
+    Initial commit
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ touch Triangle.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Triangle.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git add Triangle.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   Triangle.java
+
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git commit - m "Triangle class added to the repository"
+error: pathspec '-' did not match any file(s) known to git.
+error: pathspec 'm' did not match any file(s) known to git.
+error: pathspec 'Triangle class added to the repository' did not match any file(s) known to git.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git log
+commit 615df7819f2a9a1fdeaa77bb695f9dc4590cfad6 (HEAD -> master)
+Author: Capacitacion Jala <CapacitacionJala@fundacion-jala.local>
+Date:   Mon Feb 11 17:44:18 2019 -0400
+
+    Math class added to repository
+
+commit 8d0d5bd239fad3f4374dfb29f3bc452cf0594c58 (origin/master, origin/HEAD)
+Author: patzygit <33137804+patzygit@users.noreply.github.com>
+Date:   Mon Feb 11 17:16:02 2019 -0400
+
+    Adding a readme file
+
+commit 1dfe6d99bd068ddde42227869b5e7100669e6e04
+Author: patzygit <33137804+patzygit@users.noreply.github.com>
+Date:   Mon Feb 11 17:15:21 2019 -0400
+
+    Initial commit
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git commit -m "Triangle class added to the repository"
+[master 5317e0c] Triangle class added to the repository
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Triangle.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git log
+commit 5317e0cddd25ae2c0b24c06de5647361e6cefa3e (HEAD -> master)
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Mon Feb 11 17:51:12 2019 -0400
+
+    Triangle class added to the repository
+
+commit 615df7819f2a9a1fdeaa77bb695f9dc4590cfad6
+Author: Capacitacion Jala <CapacitacionJala@fundacion-jala.local>
+Date:   Mon Feb 11 17:44:18 2019 -0400
+
+    Math class added to repository
+
+commit 8d0d5bd239fad3f4374dfb29f3bc452cf0594c58 (origin/master, origin/HEAD)
+Author: patzygit <33137804+patzygit@users.noreply.github.com>
+Date:   Mon Feb 11 17:16:02 2019 -0400
+
+    Adding a readme file
+
+commit 1dfe6d99bd068ddde42227869b5e7100669e6e04
+Author: patzygit <33137804+patzygit@users.noreply.github.com>
+Date:   Mon Feb 11 17:15:21 2019 -0400
+
+    Initial commit
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Triangle.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git add Triangle.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   Triangle.java
+
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git commit -m "Adding a getArea method"
+[master b62240d] Adding a getArea method
+ 1 file changed, 5 insertions(+)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git log
+commit b62240d52f463c121c62584d4328ecda975f07eb (HEAD -> master)
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Mon Feb 11 17:55:54 2019 -0400
+
+    Adding a getArea method
+
+commit 5317e0cddd25ae2c0b24c06de5647361e6cefa3e
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Mon Feb 11 17:51:12 2019 -0400
+
+    Triangle class added to the repository
+
+commit 615df7819f2a9a1fdeaa77bb695f9dc4590cfad6
+Author: Capacitacion Jala <CapacitacionJala@fundacion-jala.local>
+Date:   Mon Feb 11 17:44:18 2019 -0400
+
+    Math class added to repository
+
+commit 8d0d5bd239fad3f4374dfb29f3bc452cf0594c58 (origin/master, origin/HEAD)
+Author: patzygit <33137804+patzygit@users.noreply.github.com>
+Date:   Mon Feb 11 17:16:02 2019 -0400
+
+    Adding a readme file
+
+commit 1dfe6d99bd068ddde42227869b5e7100669e6e04
+Author: patzygit <33137804+patzygit@users.noreply.github.com>
+Date:   Mon Feb 11 17:15:21 2019 -0400
+
+    Initial commit
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ touch information.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        information.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git clean -xfd
+Removing information.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ touch information.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        information.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git add information.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   information.txt
+
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git reset HEAD information.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        information.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git add information.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   information.txt
+
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git commit - "Created information file."
+error: pathspec '-' did not match any file(s) known to git.
+error: pathspec 'Created information file.' did not match any file(s) known to git.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git commit -m "Created information file."
+[master 385a6e9] Created information file.
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 information.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   information.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git diff
+diff --git a/information.txt b/information.txt
+index e69de29..ccfbf44 100644
+--- a/information.txt
++++ b/information.txt
+@@ -0,0 +1 @@
++git changes
+\ No newline at end of file
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   information.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git diff
+diff --git a/information.txt b/information.txt
+index e69de29..9853205 100644
+--- a/information.txt
++++ b/information.txt
+@@ -0,0 +1,4 @@
++git changes
++lost my eyes
++
++read my file
+\ No newline at end of file
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git commit -m "Modified information.txt"
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+        modified:   information.txt
+
+no changes added to commit
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git add information.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   information.txt
+
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git commit -m "Modified information.txt"
+[master f0b0b0e] Modified information.txt
+ 1 file changed, 4 insertions(+)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git checkout -b develop
+Switched to a new branch 'develop'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (develop)
+$ git checkout status
+error: pathspec 'status' did not match any file(s) known to git.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (develop)
+$ cd develop
+bash: cd: develop: No such file or directory
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (develop)
+$ git develop
+git: 'develop' is not a git command. See 'git --help'.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (develop)
+$ git branch
+* develop
+  master
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (develop)
+$ git status
+On branch develop
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   information.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (develop)
+$ git commit -m "Change a line in information.txt"
+On branch develop
+Changes not staged for commit:
+        modified:   information.txt
+
+no changes added to commit
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (develop)
+$ cd ..
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT (new-hola)
+$ git branch -d develop
+fatal: Couldn't look up commit object for HEAD
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT (new-hola)
+$ git github-project/
+git: 'github-project/' is not a git command. See 'git --help'.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT (new-hola)
+$ cd github-project/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (develop)
+$ git checkout master
+Switched to branch 'master'
+M       information.txt
+Your branch is ahead of 'origin/master' by 5 commits.
+  (use "git push" to publish your local commits)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git branch -d develop
+Deleted branch develop (was f0b0b0e).
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git branch
+* master
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git checkout develop
+error: pathspec 'develop' did not match any file(s) known to git.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git checkout -b develop
+Switched to a new branch 'develop'
+M       information.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (develop)
+$ touch info.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (develop)
+$ git status
+On branch develop
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   information.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (develop)
+$ git add info.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (develop)
+$ git add information.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (develop)
+$ git commit -m "adding file"
+[develop ac4f359] adding file
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100644 info.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (develop)
+$ git status
+On branch develop
+nothing to commit, working tree clean
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (develop)
+$ git push oring develop
+fatal: 'oring' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (develop)
+$ git push origin develop
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (16/16), 1.53 KiB | 313.00 KiB/s, done.
+Total 16 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), done.
+remote:
+remote: Create a pull request for 'develop' on GitHub by visiting:
+remote:      https://github.com/patzygit/github-project/pull/new/develop
+remote:
+To https://github.com/patzygit/github-project.git
+ * [new branch]      develop -> develop
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (develop)
+$ git branch -d develop
+error: Cannot delete branch 'develop' checked out at 'C:/Users/CapacitacionJala/Desktop/GIT/github-project'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (develop)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 5 commits.
+  (use "git push" to publish your local commits)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$ git branch -d develop
+error: The branch 'develop' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D develop'.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/GIT/github-project (master)
+$

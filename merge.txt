@@ -1,0 +1,78 @@
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-test (new-hola)
+$ git init
+Initialized empty Git repository in C:/Users/CapacitacionJala/Desktop/master-test/.git/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-test (master)
+$ touch master.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-test (master)
+$ git add master.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-test (master)
+$ git commit -m "master"
+[master (root-commit) 8b2f420] master
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 master.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-test (master)
+$ git checkout -b develop
+Switched to a new branch 'develop'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-test (develop)
+$ touch develop.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-test (develop)
+$ git add develop.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-test (develop)
+$ git commit -m "develop"
+[develop 9204efc] develop
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 develop.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-test (develop)
+$ git checkout master
+Switched to branch 'master'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-test (master)
+$ git checkout -b develop2
+Switched to a new branch 'develop2'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-test (develop2)
+$ touch develop2.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-test (develop2)
+$ git add develop2.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-test (develop2)
+$ git commit -m "develop2"
+[develop2 f51f45b] develop2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 develop2.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-test (develop2)
+$ git checkout master
+Switched to branch 'master'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-test (master)
+$ git checkout develop2
+Switched to branch 'develop2'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-test (develop2)
+$ git merge develop
+Merge made by the 'recursive' strategy.
+ develop.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 develop.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-test (develop2)
+$  git log --graph --pretty=oneline
+*   1a51d021cfc9c3ae2e61bf8356973f6b436fef4e (HEAD -> develop2) Merge branch 'develop' into develop2
+|\
+| * 9204efc4521140be1fc01b8c92f8a005545773b6 (develop) develop
+* | f51f45b2e5343f25ebbdb9b86f245297a5310e32 develop2
+|/
+* 8b2f420bd2d633472e02f911d5d3d1125dc6fe20 (master) master
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-test (develop2)

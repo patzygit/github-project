@@ -1,0 +1,254 @@
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (new-hola)
+$ git init
+Initialized empty Git repository in C:/Users/CapacitacionJala/Desktop/master-tes                                                                            ting/.git/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ touch master1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git add master1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git commit -m "master java"
+[master (root-commit) b585b01] master java
+ 1 file changed, 6 insertions(+)
+ create mode 100644 master1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git checkout -b develop
+Switched to a new branch 'develop'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (develop)
+$ git status
+On branch develop
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   master1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        master1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (develop)
+$ git add master1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (develop)
+$ git add master1.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (develop)
+$ git commit -m "updating a sum method and adding a file java"
+[develop 7a3fb4b] updating a sum method and adding a file java
+ 2 files changed, 8 insertions(+), 2 deletions(-)
+ create mode 100644 master1.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (develop)
+$ git checkout master
+Switched to branch 'master'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   master1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git add master1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git commit -m "Ducmentation for sum method"
+[master 77f248e] Ducmentation for sum method
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git log
+commit 77f248e89a03571138bc2a2e09f6c5a7f5d146f9 (HEAD -> master)
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Wed Feb 13 18:09:15 2019 -0400
+
+    Ducmentation for sum method
+
+commit b585b01d5bb3090f2742fd854431dcb1f269a4cc
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Wed Feb 13 18:05:04 2019 -0400
+
+    master java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git merge develop
+Auto-merging master1.txt
+Merge made by the 'recursive' strategy.
+ master1.java | 6 ++++++
+ 1 file changed, 6 insertions(+)
+ create mode 100644 master1.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   master1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git add master1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git commit -m "adding a new method for sum numbers"
+[master f5d64e4] adding a new method for sum numbers
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git checkout -b restfeature
+Switched to a new branch 'restfeature'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (restfeature)
+$ git add master1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (restfeature)
+$ git commit -m master1.txt
+[restfeature 08ea9b0] master1.txt
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (restfeature)
+$ git checkout master
+Switched to branch 'master'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ nano master1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git merge develop
+Already up to date.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ nano master1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git checkout develop
+error: Your local changes to the following files would be overwritten by checkout:
+        master1.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git commit -m "changing type"
+On branch master
+Changes not staged for commit:
+        modified:   master1.txt
+
+no changes added to commit
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ nano master1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git add master1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git commit -m "changing type"
+[master 1a8c6c8] changing type
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git merge develop
+Already up to date.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git checkout develop
+Switched to branch 'develop'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (develop)
+$ nano master1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (develop)
+$ nano master1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (develop)
+$ git add master1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (develop)
+$ git commit -m "updating rest method"
+[develop 99622a8] updating rest method
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (develop)
+$ git checkout master
+Switched to branch 'master'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ nano master1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git add master1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git commit -m "updating rest method"
+[master 359eb8e] updating rest method
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git merge develop
+Auto-merging master1.txt
+CONFLICT (content): Merge conflict in master1.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master|MERGING)
+$ nano master1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master|MERGING)
+$ git status
+On branch master
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   master1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master|MERGING)
+$ git add .
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master|MERGING)
+$ git commit -m "merge conflict fixed"
+[master 8ee65ac] merge conflict fixed
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/master-testing (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+

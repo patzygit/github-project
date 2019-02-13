@@ -1,0 +1,88 @@
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (new-hola)
+$ git init
+Initialized empty Git repository in C:/Users/CapacitacionJala/Desktop/test-re/.git/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (master)
+$ touch m1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (master)
+$ git add m1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (master)
+$ git commit -m "master 1"
+[master (root-commit) 5fb0336] master 1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 m1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (master)
+$ git checkout -b develop
+Switched to a new branch 'develop'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (develop)
+$ touch develop1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (develop)
+$ git add develop1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (develop)
+$ git commit -m "develop1"
+[develop 4f9b71c] develop1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 develop1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (develop)
+$ git checkout master
+Switched to branch 'master'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (master)
+$ touch m2.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (master)
+$ git add m2.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (master)
+$ git commit -m "master2"
+[master 6e60a58] master2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 m2.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (master)
+$ git checkout develop
+Switched to branch 'develop'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (develop)
+$ touch develop2.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (develop)
+$ git add develop2.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (develop)
+$ git commit -m "develop2"
+[develop 3c02998] develop2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 develop2.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (develop)
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Applying: develop1
+Applying: develop2
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (develop)
+$ git log --graph --pretty-oneline
+fatal: unrecognized argument: --pretty-oneline
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (develop)
+$ git log --graph --pretty -oneline
+fatal: unrecognized argument: -oneline
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (develop)
+$ git log --graph --pretty=oneline
+* 6fed3404309131ace1ddda549850307c7c9e3864 (HEAD -> develop) develop2
+* d8265655994af1d8e191a2b588a9257533e09247 develop1
+* 6e60a58537907907ef36aa52496726b9354a456c (master) master2
+* 5fb0336727625582e91ecb4d56d62fbb590e2bf8 master 1
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/test-re (develop)
+$

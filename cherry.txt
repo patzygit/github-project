@@ -1,0 +1,161 @@
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (new-hola)
+$ git init
+Initialized empty Git repository in C:/Users/CapacitacionJala/Desktop/cherry-git                                                                                                                          /.git/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (master)
+$ touch Readme.md
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (master)
+$ git add .
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (master)
+$ git commit -m "Adding readme file"
+[master (root-commit) 85f4d5f] Adding readme file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Readme.md
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (master)
+$ git checkout -b branch-a/branchfirst
+Switched to a new branch 'branch-a/branchfirst'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (branch-a/branchfirst)
+$ touch Bolivia.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (branch-a/branchfirst)
+$ git add .
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (branch-a/branchfirst)
+$ git commit - "Bolivia.txt"
+error: pathspec '-' did not match any file(s) known to git.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (branch-a/branchfirst)
+$ git commit -m "Bolivia.txt"
+[branch-a/branchfirst fe6f689] Bolivia.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Bolivia.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (branch-a/branchfirst)
+$ touch Dog.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (branch-a/branchfirst)
+$ touch Read.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (branch-a/branchfirst)
+$ git add .
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (branch-a/branchfirst)
+$ git commit -m "add files"
+[branch-a/branchfirst ea2b40b] add files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Dog.txt
+ create mode 100644 Read.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (branch-a/branchfirst)
+$ git checkout master
+Switched to branch 'master'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (master)
+$ git checkout -b branch-b/second
+Switched to a new branch 'branch-b/second'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (branch-b/second)
+$ touch Uruguay.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (branch-b/second)
+$ touch Cat.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (branch-b/second)
+$ touch Green.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (branch-b/second)
+$ git add .
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (branch-b/second)
+$ git commit -m "adding files on second branch"
+[branch-b/second 9b10cd8] adding files on second branch
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Cat.txt
+ create mode 100644 Green.txt
+ create mode 100644 Uruguay.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (branch-b/second)
+$ git checkout master
+Switched to branch 'master'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (master)
+$ git checkout -b colors/color
+Switched to a new branch 'colors/color'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (colors/color)
+$ git checkout branch-a/branchfirst
+Switched to branch 'branch-a/branchfirst'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (branch-a/branchfirst)
+$ ls
+Bolivia.txt  branch-a/  branch-b/  colors/  Dog.txt  Read.txt  Readme.md
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (branch-a/branchfirst)
+$ git log
+commit ea2b40b38e9aaafe2dccf59e09bbc7afa4a6dec5 (HEAD -> branch-a/branchfirst)
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 18:11:38 2019 -0400
+
+    add files
+
+commit fe6f689b600a13eaf778279208c4645b00fd65a9
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 18:10:52 2019 -0400
+
+    Bolivia.txt
+
+commit 85f4d5f6380fc3249938052c31cf9c1534c93c1a (master, colors/color)
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 18:09:31 2019 -0400
+
+    Adding readme file
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (branch-a/branchfirst)
+$ git checkout master
+Switched to branch 'master'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (master)
+$ git checkout colors/color
+Switched to branch 'colors/color'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (colors/color)
+$ git cherry-pick fe6f689b600a13eaf778279208c4645b00fd65a9
+[colors/color 9c31680] Bolivia.txt
+ Date: Fri Feb 15 18:10:52 2019 -0400
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Bolivia.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (colors/color)
+$ git log
+commit 9c31680d625e5a874ddfe9771a6b7ef1d0cde2ff (HEAD -> colors/color)
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 18:10:52 2019 -0400
+
+    Bolivia.txt
+
+commit 85f4d5f6380fc3249938052c31cf9c1534c93c1a (master)
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 18:09:31 2019 -0400
+
+    Adding readme file
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (colors/color)
+$ git status
+On branch colors/color
+nothing to commit, working tree clean
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (colors/color)
+$ git reset HEAD .
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (colors/color)
+$ git status
+On branch colors/color
+nothing to commit, working tree clean
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/cherry-git (colors/color)
+$

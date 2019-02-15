@@ -1,0 +1,394 @@
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (master)
+$ git log
+commit c3f449ee7518afe9345bd0ed0e55458dec832b46 (HEAD -> master)
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 17:36:07 2019 -0400
+
+    add my_info file
+
+commit 85cdb859046eeea757901b84a64491db92ca0109
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 17:13:28 2019 -0400
+
+    added gitignoge file
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (master)
+$ git checkout -b branch-a/
+fatal: 'branch-a/' is not a valid branch name.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (master)
+$ git checkout -b branch-a/branchTest
+Switched to a new branch 'branch-a/branchTest'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ touch controler.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ nano controler.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ touch info.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ nano info.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git status
+On branch branch-a/branchTest
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        controler.java
+        info.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash save "working on controler class for new feature" -u
+No local changes to save
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash save "working on controler class for new feature" -u
+No local changes to save
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash save "working on controler class for new feature"
+No local changes to save
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash save -u "working on controler class for new feature"
+warning: LF will be replaced by CRLF in controler.java.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in info.txt.
+The file will have its original line endings in your working directory.
+Saved working directory and index state On branch-a/branchTest: working on controler class for new feature
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git status
+On branch branch-a/branchTest
+nothing to commit, working tree clean
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash list
+stash@{0}: On branch-a/branchTest: working on controler class for new feature
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git checkout master
+Switched to branch 'master'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (master)
+$ nano my_info.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   my_info.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (master)
+$ git add my_info.txt
+warning: LF will be replaced by CRLF in my_info.txt.
+The file will have its original line endings in your working directory.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (master)
+$ git commit -m "Fixing information in my_info file"
+[master 8a51af2] Fixing information in my_info file
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (master)
+$ git log
+commit 8a51af24166983624ddbecb6d1160824db5e8697 (HEAD -> master)
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 17:45:50 2019 -0400
+
+    Fixing information in my_info file
+
+commit c3f449ee7518afe9345bd0ed0e55458dec832b46 (branch-a/branchTest)
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 17:36:07 2019 -0400
+
+    add my_info file
+
+commit 85cdb859046eeea757901b84a64491db92ca0109
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 17:13:28 2019 -0400
+
+    added gitignoge file
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (master)
+$ git checkout branch-a/branchTest
+Switched to branch 'branch-a/branchTest'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git status
+On branch branch-a/branchTest
+nothing to commit, working tree clean
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash list
+stash@{0}: On branch-a/branchTest: working on controler class for new feature
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash pop
+Already up to date!
+On branch branch-a/branchTest
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        controler.java
+        info.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+Dropped refs/stash@{0} (3a75951c45e76f51fe6d0df891438239053c1d87)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash list
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash save -u "working on controler class for new feature"
+Saved working directory and index state On branch-a/branchTest: working on controler class for new feature
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git status
+On branch branch-a/branchTest
+nothing to commit, working tree clean
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash list
+stash@{0}: On branch-a/branchTest: working on controler class for new feature
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash apply
+Already up to date!
+On branch branch-a/branchTest
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        controler.java
+        info.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash list
+stash@{0}: On branch-a/branchTest: working on controler class for new feature
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git status
+On branch branch-a/branchTest
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        controler.java
+        info.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git add .
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git commit -m "changes"
+[branch-a/branchTest 1ef3860] changes
+ 2 files changed, 8 insertions(+)
+ create mode 100644 controler.java
+ create mode 100644 info.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git status
+On branch branch-a/branchTest
+nothing to commit, working tree clean
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git log
+commit 1ef38605b7014ab9677f8908447a492da6cc7db9 (HEAD -> branch-a/branchTest)
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 17:51:48 2019 -0400
+
+    changes
+
+commit c3f449ee7518afe9345bd0ed0e55458dec832b46
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 17:36:07 2019 -0400
+
+    add my_info file
+
+commit 85cdb859046eeea757901b84a64491db92ca0109
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 17:13:28 2019 -0400
+
+    added gitignoge file
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ nano controler.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ nano info.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ touch testting.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ nano testting.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git status
+On branch branch-a/branchTest
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   controler.java
+        modified:   info.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        testting.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash
+Saved working directory and index state WIP on branch-a/branchTest: 1ef3860 changes
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash list
+stash@{0}: WIP on branch-a/branchTest: 1ef3860 changes
+stash@{1}: On branch-a/branchTest: working on controler class for new feature
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash pop
+On branch branch-a/branchTest
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   controler.java
+        modified:   info.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        testting.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (d0c47d2fa12808e28fe151cc418820dce6a09a21)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash list
+stash@{0}: On branch-a/branchTest: working on controler class for new feature
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ touch documentTest.docx
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash list
+stash@{0}: On branch-a/branchTest: working on controler class for new feature
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ touch documentTest.rtf
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash -a
+warning: LF will be replaced by CRLF in testting.txt.
+The file will have its original line endings in your working directory.
+Saved working directory and index state WIP on branch-a/branchTest: 1ef3860 changes
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git status
+On branch branch-a/branchTest
+nothing to commit, working tree clean
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash list
+stash@{0}: WIP on branch-a/branchTest: 1ef3860 changes
+stash@{1}: On branch-a/branchTest: working on controler class for new feature
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git log --oneline --graph stash@{1}
+*-.   4262302 On branch-a/branchTest: working on controler class for new feature
+|\ \
+| | * ee328db untracked files on branch-a/branchTest: c3f449e add my_info file
+| * 414b289 index on branch-a/branchTest: c3f449e add my_info file
+|/
+* c3f449e add my_info file
+* 85cdb85 added gitignoge file
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git log --oneline --graph
+* 1ef3860 (HEAD -> branch-a/branchTest) changes
+* c3f449e add my_info file
+* 85cdb85 added gitignoge file
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git log --oneline --graph stash@{0}
+*-.   46328b9 (refs/stash) WIP on branch-a/branchTest: 1ef3860 changes
+|\ \
+| | * eef01a2 untracked files on branch-a/branchTest: 1ef3860 changes
+| * 6cb83dc index on branch-a/branchTest: 1ef3860 changes
+|/
+* 1ef3860 (HEAD -> branch-a/branchTest) changes
+* c3f449e add my_info file
+* 85cdb85 added gitignoge file
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git status
+On branch branch-a/branchTest
+nothing to commit, working tree clean
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git stash pop
+On branch branch-a/branchTest
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   controler.java
+        modified:   info.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        documentTest.rtf
+        testting.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (46328b92419f98e9c082cccf49370e0a35161b89)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git add --force documentTest.rtf
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$ git status
+On branch branch-a/branchTest
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   documentTest.rtf
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   controler.java
+        modified:   info.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        testting.txt
+
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/testinggit (branch-a/branchTest)
+$

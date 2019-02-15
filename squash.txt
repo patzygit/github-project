@@ -1,0 +1,135 @@
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (new-hola)
+$ git init
+Initialized empty Git repository in C:/Users/CapacitacionJala/Desktop/numbers/.git/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (master)
+$ touch 1.0.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (master)
+$ git add .
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (master)
+$ git commit -m "1.0"
+[master (root-commit) 9ac17bf] 1.0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1.0.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (master)
+$ touch 1.1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (master)
+$ git add .
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (master)
+$ git commit -m "1.1"
+[master 6b2c008] 1.1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1.1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (master)
+$ touch 1.2.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (master)
+$ git add .
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (master)
+$ git commit -m "1.2"
+[master d12e8be] 1.2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1.2.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (master)
+$ touch 2.0.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (master)
+$ git add .
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (master)
+$ git commit -m "2.0"
+[master ecb1b4a] 2.0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2.0.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (master)
+$ touch 2.1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (master)
+$ git add .
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (master)
+$ git commit -m "2.1"
+[master 98e60e3] 2.1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2.1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (master)
+$ git log
+commit 98e60e363cd34991ebcd9cbabd3be0bb111222a1 (HEAD -> master)
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 18:22:51 2019 -0400
+
+    2.1
+
+commit ecb1b4af447da54955e2ebe9fe87cab633ab769b
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 18:22:37 2019 -0400
+
+    2.0
+
+commit d12e8be4997010f81449260370d68d9d790acb70
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 18:22:17 2019 -0400
+
+    1.2
+
+commit 6b2c008abaa27233c9da86b13cca05059a87a7ef
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 18:22:00 2019 -0400
+
+    1.1
+
+commit 9ac17bfc1dace1816f2d66505835bd70d95d3774
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 18:21:45 2019 -0400
+
+    1.0
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (master)
+$ git rebase -i HEAD~4
+[detached HEAD 1957c2b] 1.1
+ Date: Fri Feb 15 18:22:00 2019 -0400
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1.1.txt
+ create mode 100644 1.2.txt
+[detached HEAD 3fcfe5e] 2.0
+ Date: Fri Feb 15 18:22:37 2019 -0400
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2.0.txt
+ create mode 100644 2.1.txt
+Successfully rebased and updated refs/heads/master.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/numbers (master)
+$ git log
+commit 3fcfe5e27f46decfb22743c572b5795916a2c77c (HEAD -> master)
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 18:22:37 2019 -0400
+
+    2.0
+
+    2.1
+
+commit 1957c2bb6fd09658c2791e9afa08936a81111b1a
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 18:22:00 2019 -0400
+
+    1.1
+
+    1.2
+
+commit 9ac17bfc1dace1816f2d66505835bd70d95d3774
+Author: Wilma Paca <wilma.paca@jalasoft.com>
+Date:   Fri Feb 15 18:21:45 2019 -0400
+
+    1.0
+

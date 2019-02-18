@@ -1,0 +1,478 @@
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork (new-hola)
+$ git clone https://github.com/patzygit/fourth-season.git
+Cloning into 'fourth-season'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork (new-hola)
+$ ls
+fourth-season/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork (new-hola)
+$ cd fourth-season/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ ls
+README.md
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ nano README.md
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git add README.md
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git commit -m "Updating Readme file"
+[master 483496c] Updating Readme file
+ 1 file changed, 1 insertion(+)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 308 bytes | 308.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/patzygit/fourth-season.git
+   de30c2a..483496c  master -> master
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git checkout -b first/first
+Switched to a new branch 'first/first'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ touch car.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ git add car.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ git status
+On branch first/first
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   car.java
+
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ git push origin first/first
+Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'first/first' on GitHub by visiting:
+remote:      https://github.com/patzygit/fourth-season/pull/new/first/first
+remote:
+To https://github.com/patzygit/fourth-season.git
+ * [new branch]      first/first -> first/first
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ git checkout master
+Switched to branch 'master'
+A       car.java
+Your branch is up to date with 'origin/master'.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git checkout -b second/second
+Switched to a new branch 'second/second'
+A       car.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (second/second)
+$ touch animal.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (second/second)
+$ git add animal.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (second/second)
+$ git commit -m "adding a animal class"
+[second/second 0c264d8] adding a animal class
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 animal.java
+ create mode 100644 car.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (second/second)
+$ git push origin second/second
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 294 bytes | 294.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'second/second' on GitHub by visiting:
+remote:      https://github.com/patzygit/fourth-season/pull/new/second/second
+remote:
+To https://github.com/patzygit/fourth-season.git
+ * [new branch]      second/second -> second/second
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (second/second)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git checkout -b develop
+Switched to a new branch 'develop'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (develop)
+$ git checkout first/first
+Switched to branch 'first/first'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ ls
+first/  README.md  second/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ git  status
+On branch first/first
+nothing to commit, working tree clean
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ touch number.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ nano number.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ git status
+On branch first/first
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        number.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ git add number.java
+warning: LF will be replaced by CRLF in number.java.
+The file will have its original line endings in your working directory.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ git commit -m "number class"
+[first/first 834af53] number class
+ 1 file changed, 7 insertions(+)
+ create mode 100644 number.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ git push origin first/first
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 353 bytes | 353.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/patzygit/fourth-season.git
+   483496c..834af53  first/first -> first/first
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ git checkout mas
+error: pathspec 'mas' did not match any file(s) known to git.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git remote -v
+origin  https://github.com/patzygit/fourth-season.git (fetch)
+origin  https://github.com/patzygit/fourth-season.git (push)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git remote add upstream "https://github.com/koko67/fourth-season.git"
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git remote -v
+origin  https://github.com/patzygit/fourth-season.git (fetch)
+origin  https://github.com/patzygit/fourth-season.git (push)
+upstream        https://github.com/koko67/fourth-season.git (fetch)
+upstream        https://github.com/koko67/fourth-season.git (push)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git pull upstream master
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 7 (delta 1), reused 6 (delta 1), pack-reused 0
+Unpacking objects: 100% (7/7), done.
+From https://github.com/koko67/fourth-season
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> upstream/master
+Merge made by the 'recursive' strategy.
+ Math.java | 7 +++++++
+ 1 file changed, 7 insertions(+)
+ create mode 100644 Math.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git push origin upstream/master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 1.23 KiB | 630.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/patzygit/fourth-season.git
+ * [new branch]      upstream/master -> upstream/master
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git checkout first/first
+Switched to branch 'first/first'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ nano number.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ git add number.java
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ git commit -m "adding a setNumber method"
+[first/first 269e04c] adding a setNumber method
+ 1 file changed, 8 insertions(+), 3 deletions(-)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ git push origin first/first
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 395 bytes | 395.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/patzygit/fourth-season.git
+   834af53..269e04c  first/first -> first/first
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ git push origin upstream/master
+Everything up-to-date
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (first/first)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git push origin upstream/master
+Everything up-to-date
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git push upstream master
+remote: Permission to koko67/fourth-season.git denied to patzygit.
+fatal: unable to access 'https://github.com/koko67/fourth-season.git/': The requested URL returned error: 403
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git remote -v
+origin  https://github.com/patzygit/fourth-season.git (fetch)
+origin  https://github.com/patzygit/fourth-season.git (push)
+upstream        https://github.com/koko67/fourth-season.git (fetch)
+upstream        https://github.com/koko67/fourth-season.git (push)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git pull upstream master
+remote: Enumerating objects: 34, done.
+remote: Counting objects: 100% (34/34), done.
+remote: Compressing objects: 100% (22/22), done.
+remote: Total 31 (delta 10), reused 26 (delta 6), pack-reused 0
+Unpacking objects: 100% (31/31), done.
+From https://github.com/koko67/fourth-season
+ * branch            master     -> FETCH_HEAD
+   383938f..e2d6d99  master     -> upstream/master
+Merge made by the 'recursive' strategy.
+ .gitignore      | 3 +++
+ File1.txt       | 0
+ File2.txt       | 0
+ File3.txt       | 0
+ HelloWorld.java | 3 +++
+ Math.java       | 2 +-
+ file1.txt       | 1 +
+ lorem.txt       | 3 +++
+ 8 files changed, 11 insertions(+), 1 deletion(-)
+ create mode 100644 .gitignore
+ create mode 100644 File1.txt
+ create mode 100644 File2.txt
+ create mode 100644 File3.txt
+ create mode 100644 HelloWorld.java
+ create mode 100644 file1.txt
+ create mode 100644 lorem.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 18 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ nano file1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ nano file1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 18 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   File1.txt
+        modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git push origin upstream/master
+Enumerating objects: 34, done.
+Counting objects: 100% (34/34), done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (28/28), done.
+Writing objects: 100% (31/31), 4.94 KiB | 631.00 KiB/s, done.
+Total 31 (delta 11), reused 0 (delta 0)
+remote: Resolving deltas: 100% (11/11), completed with 1 local object.
+To https://github.com/patzygit/fourth-season.git
+   383938f..e2d6d99  upstream/master -> upstream/master
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git add file1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git commit -m "changing file1"
+[master 05d6692] changing file1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git push origin upstream/master
+Everything up-to-date
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ git push origin master
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 908 bytes | 454.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/patzygit/fourth-season.git
+   483496c..05d6692  master -> master
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/fourth-season (master)
+$ cd ..
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork (new-hola)
+$ git clone https://github.com/koko67/gitflow-example.git
+Cloning into 'gitflow-example'...
+warning: You appear to have cloned an empty repository.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork (new-hola)
+$ git clone https://github.com/koko67/gitfloww.git
+Cloning into 'gitfloww'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork (new-hola)
+$ cd gitflow
+bash: cd: gitflow: No such file or directory
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork (new-hola)
+$ cd gitfloww
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/gitfloww (master)
+$ git checout -b develop
+git: 'checout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/gitfloww (master)
+$ git checkout -b develop
+Switched to a new branch 'develop'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/gitfloww (develop)
+$ git push origin develop
+remote: Permission to koko67/gitfloww.git denied to patzygit.
+fatal: unable to access 'https://github.com/koko67/gitfloww.git/': The requested URL returned error: 403
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/gitfloww (develop)
+$ git checkout develop
+Already on 'develop'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/gitfloww (develop)
+$ git checkout mas
+error: pathspec 'mas' did not match any file(s) known to git.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/gitfloww (develop)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/gitfloww (master)
+$ git push origin master
+remote: Permission to koko67/gitfloww.git denied to patzygit.
+fatal: unable to access 'https://github.com/koko67/gitfloww.git/': The requested URL returned error: 403
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/gitfloww (master)
+$ git pull origin master
+From https://github.com/koko67/gitfloww
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/gitfloww (master)
+$ git pull origin develop
+From https://github.com/koko67/gitfloww
+ * branch            develop    -> FETCH_HEAD
+ * [new branch]      develop    -> origin/develop
+Already up to date.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/gitfloww (master)
+$ git remote -v
+origin  https://github.com/koko67/gitfloww.git (fetch)
+origin  https://github.com/koko67/gitfloww.git (push)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/gitfloww (master)
+$ git checkout develop
+Switched to branch 'develop'
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/gitfloww (develop)
+$ git pull origin develop
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From https://github.com/koko67/gitfloww
+ * branch            develop    -> FETCH_HEAD
+   4e9bdda..f2c2e36  develop    -> origin/develop
+Updating 4e9bdda..f2c2e36
+Fast-forward
+ file1.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file1.txt
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/Fork/gitfloww (develop)

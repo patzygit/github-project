@@ -1,0 +1,77 @@
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repo
+$ git init .
+Initialized empty Git repository in C:/Users/CapacitacionJala/Desktop/migration/repo/.git/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repo (master)
+$ git remote add origin-b
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repo (master)
+$ git remote add origin-b https://github.com/patzygit/Todoly.git
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repo (master)
+$ git fetch origin-b
+remote: Enumerating objects: 187, done.
+remote: Total 187 (delta 0), reused 0 (delta 0), pack-reused 187
+Receiving objects: 100% (187/187), 42.60 KiB | 335.00 KiB/s, done.
+Resolving deltas: 100% (77/77), done.
+From https://github.com/patzygit/Todoly
+ * [new branch]      https/github.com/patzygit/Todoly -> origin-b/https/github.com/patzygit/Todoly
+ * [new branch]      master     -> origin-b/master
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repo (master)
+$ git branch
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repo (master)
+$ git remote add origin https://github.com/patzygit/repoA.git
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repo (master)
+$ git remote -v
+origin  https://github.com/patzygit/repoA.git (fetch)
+origin  https://github.com/patzygit/repoA.git (push)
+origin-b        https://github.com/patzygit/Todoly.git (fetch)
+origin-b        https://github.com/patzygit/Todoly.git (push)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repo (master)
+$ git checkout https/github.com/patzygit/Todoly
+Switched to a new branch 'https/github.com/patzygit/Todoly'
+Branch 'https/github.com/patzygit/Todoly' set up to track remote branch 'https/github.com/patzygit/Todoly' from 'origin-b'.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repo (https/github.com/patzygit/Todoly)
+$ git push origin https/github.com/patzygit/Todoly
+Enumerating objects: 187, done.
+Counting objects: 100% (187/187), done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (92/92), done.
+Writing objects: 100% (187/187), 42.61 KiB | 1.06 MiB/s, done.
+Total 187 (delta 77), reused 187 (delta 77)
+remote: Resolving deltas: 100% (77/77), done.
+remote:
+remote: Create a pull request for 'https/github.com/patzygit/Todoly' on GitHub by visiting:
+remote:      https://github.com/patzygit/repoA/pull/new/https/github.com/patzygit/Todoly
+remote:
+To https://github.com/patzygit/repoA.git
+ * [new branch]      https/github.com/patzygit/Todoly -> https/github.com/patzygit/Todoly
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repo (https/github.com/patzygit/Todoly)
+$ git checkout master
+Switched to a new branch 'master'
+Branch 'master' set up to track remote branch 'master' from 'origin-b'.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repo (master)
+$ git branch
+  https/github.com/patzygit/Todoly
+* master
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repo (master)

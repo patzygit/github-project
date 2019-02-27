@@ -1,0 +1,55 @@
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/repositorios/reposA (master)
+$ git daemon --base-path=. --export-all --reuseaddr --informative-errors --verbose <--  BAD
+[2080] Ready to rumble
+
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/repositorios/reposA (master)
+$
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/repositorios/reposA (master)
+$ cd ..
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/repositorios (new-hola)
+$ git daemon --base-path=. --export-all --reuseaddr --informative-errors --verbose <--CORRECT
+[5324] Ready to rumble
+[6424] Connection from 127.0.0.1:49951
+[6424] unable to set SO_KEEPALIVE on socket: No such file or directory
+[6424] Extended attribute "host": 127.0.0.1
+[6424] Request upload-pack for '/A'
+[6424] './A' does not appear to be a git repository
+[5324] [6424] Disconnected (with error)
+[6780] Connection from 127.0.0.1:49958
+[6780] unable to set SO_KEEPALIVE on socket: No such file or directory
+[6780] Extended attribute "host": 127.0.0.1
+[6780] Request upload-pack for '/reposA'
+[5324] [6780] Disconnected
+[5788] Connection from 127.0.0.1:49962
+[5788] unable to set SO_KEEPALIVE on socket: No such file or directory
+[5788] Extended attribute "host": 127.0.0.1
+[5788] Request upload-pack for '/reposB'
+
+OTEHER BASH ON OTHER FOLDER
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/clonetest (new-hola)
+$ git clone git://127.0.0.1/A
+Cloning into 'A'...
+fatal: remote error: no such repository: /A
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/clonetest (new-hola)
+$ git clone git://127.0.0.1/reposA
+Cloning into 'reposA'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Receiving objects: 100% (3/3), done.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/clonetest (new-hola)
+$ git clone git://127.0.0.1/reposB
+Cloning into 'reposB'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Receiving objects: 100% (3/3), done.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/clonetest (new-hola)

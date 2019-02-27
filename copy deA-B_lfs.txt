@@ -1,0 +1,204 @@
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration (new-hola)
+$ git clone https://github.com/patzygit/repoA.git
+Cloning into 'repoA'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration (new-hola)
+$ git remote -v
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration (new-hola)
+$ git remote add origin
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration (new-hola)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration (new-hola)
+$ cd repoA/
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repoA (master)
+$ git remote -v
+origin  https://github.com/patzygit/repoA.git (fetch)
+origin  https://github.com/patzygit/repoA.git (push)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repoA (master)
+$ git remote add origin-b https://github.com/JamesNK/Newtonsoft.Json.git
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repoA (master)
+$ git remote -v
+origin  https://github.com/patzygit/repoA.git (fetch)
+origin  https://github.com/patzygit/repoA.git (push)
+origin-b        https://github.com/JamesNK/Newtonsoft.Json.git (fetch)
+origin-b        https://github.com/JamesNK/Newtonsoft.Json.git (push)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repoA (master)
+$ git fetch origin
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repoA (master)
+$ git fetch origin-b
+warning: no common commits
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 26220 (delta 1), reused 2 (delta 0), pack-reused 26212
+Receiving objects: 100% (26220/26220), 24.94 MiB | 1.29 MiB/s, done.
+Resolving deltas: 100% (21358/21358), done.
+From https://github.com/JamesNK/Newtonsoft.Json
+ * [new branch]      TylerBrinkley-generic-json-converter -> origin-b/TylerBrinkley-generic-json-converter
+ * [new branch]      TylerBrinkley-generic-json-converter-attribute -> origin-b/TylerBrinkley-generic-json-converter-attribute
+ * [new branch]      dco123-master          -> origin-b/dco123-master
+ * [new branch]      jamesnk/aquire-dotnet-install -> origin-b/jamesnk/aquire-dotnet-install
+ * [new branch]      jamesnk/azure-pipelines -> origin-b/jamesnk/azure-pipelines
+ * [new branch]      jamesnk/bytearray-emptystring -> origin-b/jamesnk/bytearray-emptystring
+ * [new branch]      jamesnk/contract-resolver-perf -> origin-b/jamesnk/contract-resolver-perf
+ * [new branch]      jamesnk/deserialize-datatable-emptyarray -> origin-b/jamesnk/deserialize-datatable-emptyarray
+ * [new branch]      jamesnk/fix-build-artifacts-error -> origin-b/jamesnk/fix-build-artifacts-error
+ * [new branch]      jamesnk/invalidtype-read-exception -> origin-b/jamesnk/invalidtype-read-exception
+ * [new branch]      jamesnk/jsonpath-docs  -> origin-b/jamesnk/jsonpath-docs
+ * [new branch]      jamesnk/jsonwriter-depth -> origin-b/jamesnk/jsonwriter-depth
+ * [new branch]      jamesnk/line-endings   -> origin-b/jamesnk/line-endings
+ * [new branch]      jamesnk/merge-comparison -> origin-b/jamesnk/merge-comparison
+ * [new branch]      jamesnk/more-pipelines-yaml -> origin-b/jamesnk/more-pipelines-yaml
+ * [new branch]      jamesnk/nullable-types -> origin-b/jamesnk/nullable-types
+ * [new branch]      jamesnk/path-test      -> origin-b/jamesnk/path-test
+ * [new branch]      jamesnk/pipelines-badge -> origin-b/jamesnk/pipelines-badge
+ * [new branch]      jamesnk/pipelines-pr-fix -> origin-b/jamesnk/pipelines-pr-fix
+ * [new branch]      jamesnk/read-empty-tests -> origin-b/jamesnk/read-empty-tests
+ * [new branch]      jamesnk/serialization-exception-lineinfo -> origin-b/jamesnk/serialization-exception-lineinfo
+ * [new branch]      jamesnk/test-package-update -> origin-b/jamesnk/test-package-update
+ * [new branch]      jamesnk/update-version -> origin-b/jamesnk/update-version
+ * [new branch]      json-reader-boxing     -> origin-b/json-reader-boxing
+ * [new branch]      jsonreader-refactor    -> origin-b/jsonreader-refactor
+ * [new branch]      location-reference-resolver -> origin-b/location-reference-resolver
+ * [new branch]      master                 -> origin-b/master
+ * [new branch]      release/12.0.1         -> origin-b/release/12.0.1
+ * [new branch]      serialization-binder   -> origin-b/serialization-binder
+ * [new branch]      serializationbinder    -> origin-b/serializationbinder
+ * [new branch]      visualstudio-assemblyversion -> origin-b/visualstudio-assemblyversion
+ * [new tag]         12.0.1                 -> 12.0.1
+ * [new tag]           1.3.1                  -> 1.3.1
+ * [new tag]           10.0.1                 -> 10.0.1
+ * [new tag]           10.0.2                 -> 10.0.2
+ * [new tag]           10.0.3                 -> 10.0.3
+ * [new tag]           11.0.1                 -> 11.0.1
+ * [new tag]           11.0.2                 -> 11.0.2
+ * [new tag]           2.0.1                  -> 2.0.1
+ * [new tag]           2.0.2                  -> 2.0.2
+ * [new tag]           2.0.3                  -> 2.0.3
+ * [new tag]           2.0.4                  -> 2.0.4
+ * [new tag]           3.0.1                  -> 3.0.1
+ * [new tag]           3.5.1                  -> 3.5.1
+ * [new tag]           3.5.2                  -> 3.5.2
+ * [new tag]           3.5.3                  -> 3.5.3
+ * [new tag]           3.5.4                  -> 3.5.4
+ * [new tag]           3.5.5                  -> 3.5.5
+ * [new tag]           3.5.6                  -> 3.5.6
+ * [new tag]           3.5.7                  -> 3.5.7
+ * [new tag]           3.5.8                  -> 3.5.8
+ * [new tag]           4.0.1                  -> 4.0.1
+ * [new tag]           4.0.2                  -> 4.0.2
+ * [new tag]           4.0.3                  -> 4.0.3
+ * [new tag]           4.0.4                  -> 4.0.4
+ * [new tag]           4.0.5                  -> 4.0.5
+ * [new tag]           4.0.6                  -> 4.0.6
+ * [new tag]           4.0.7                  -> 4.0.7
+ * [new tag]           4.0.8                  -> 4.0.8
+ * [new tag]           4.5.1                  -> 4.5.1
+ * [new tag]           4.5.10                 -> 4.5.10
+ * [new tag]           4.5.11                 -> 4.5.11
+ * [new tag]           4.5.2                  -> 4.5.2
+ * [new tag]           4.5.3                  -> 4.5.3
+ * [new tag]           4.5.4                  -> 4.5.4
+ * [new tag]           4.5.5                  -> 4.5.5
+ * [new tag]           4.5.6                  -> 4.5.6
+ * [new tag]           4.5.7                  -> 4.5.7
+ * [new tag]           4.5.8                  -> 4.5.8
+ * [new tag]           4.5.9                  -> 4.5.9
+ * [new tag]           5.0.1                  -> 5.0.1
+ * [new tag]           5.0.2                  -> 5.0.2
+ * [new tag]           5.0.3                  -> 5.0.3
+ * [new tag]           5.0.4                  -> 5.0.4
+ * [new tag]           5.0.5                  -> 5.0.5
+ * [new tag]           5.0.6                  -> 5.0.6
+ * [new tag]           5.0.7                  -> 5.0.7
+ * [new tag]           5.0.8                  -> 5.0.8
+ * [new tag]           6.0.1                  -> 6.0.1
+ * [new tag]           6.0.2                  -> 6.0.2
+ * [new tag]           6.0.3                  -> 6.0.3
+ * [new tag]           6.0.4                  -> 6.0.4
+ * [new tag]           6.0.5                  -> 6.0.5
+ * [new tag]           6.0.6                  -> 6.0.6
+ * [new tag]           6.0.7                  -> 6.0.7
+ * [new tag]           6.0.8                  -> 6.0.8
+ * [new tag]           7.0.1                  -> 7.0.1
+ * [new tag]           8.0.1                  -> 8.0.1
+ * [new tag]           8.0.2                  -> 8.0.2
+ * [new tag]           8.0.3                  -> 8.0.3
+ * [new tag]           9.0.1                  -> 9.0.1
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repoA (master)
+$ git pull origin master
+From https://github.com/patzygit/repoA
+ * branch              master     -> FETCH_HEAD
+Already up to date.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repoA (master)
+$ git lfs install
+Updated git hooks.
+Git LFS initialized.
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repoA (master)
+$ git lfs track *.lfs
+Tracking "*.lfs"
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repoA (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitattributes
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repoA (master)
+$ git add .
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repoA (master)
+$ git commit -m "added gitattributes file"
+[master fe523a81] added gitattributes file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitattributes
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repoA (master)
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repoA (master)
+$ git push origin
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 324 bytes | 14.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/patzygit/repoA.git
+   7c653c9d..fe523a81  master -> master
+
+CapacitacionJala@C302-07 MINGW64 ~/Desktop/migration/repoA (master)
